@@ -126,6 +126,7 @@ a:link, a:visited {
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
     transition: border-bottom 0.2s, color 0.2s;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
 }
 
 a:hover, a:active {
@@ -141,6 +142,7 @@ a:hover, a:active {
     text-decoration: none;
     border-radius: 200px;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-full:link, .btn-full:visited, input[type=submit] {
@@ -186,6 +188,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -214,6 +218,7 @@ header {
     font-size: 90%;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s;
+    -webkit-transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover, .main-nav li a:active {
@@ -259,11 +264,16 @@ header {
     width: 100%;
     height: auto;
     transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
     transition: transform 0.5s, opacity 0.5s;
+    -webkit-transition: transform 0.5s, opacity 0.5s;
 }
 
 .meal-photo img:hover {
     transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
     opacity: 1;
 }
 
@@ -497,6 +507,7 @@ footer {
     border: 0;
     color: #888;
     transition: color 0.2s;
+    -webkit-transition: color 0.2s;
 }
 
 .footer-nav li a:hover, .footer-nav li a:active {
@@ -512,6 +523,7 @@ footer {
 .logo-googleplus,
 .logo-linkedin {
     transition: color 0.2s;
+    -webkit-transition: color 0.2s;
 }
 
 .logo-facebook:hover {

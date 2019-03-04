@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- initial-scale=1 means initial zoom level is 1 as default -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
   
         <!-- Using Normalize.css as style resetter -->
@@ -11,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css" />
         <!-- Our own style file -->
         <link rel="stylesheet" type="text/css" href="./resources/css/style.css" />
+        <!-- For media queries -->
+        <link rel="stylesheet" type="text/css" href="./resources/css/queries.css" />
         <!-- Using ionicons -->
         <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
         <!-- Using Lato google font -->
@@ -399,5 +402,10 @@
                 <p>Copyright &copy; 2015 by Omnifood. All rights reserved.</p>
             </div>
         </footer>
+
+        <!-- To make webpage work on older browsers -->
+        <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/selectivizr2@1.0.9/selectivizr2.min.js"></script>
     </body>
 </html>
