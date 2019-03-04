@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     /* For Sticky Navigation */
+    /* We are using waypoint.js for it */
+    /* It triggers the function on scroll */
     $('.js--section-features').waypoint(function(direction) {
         if(direction == 'down') {
             $('nav').addClass('sticky');
@@ -56,6 +58,47 @@ $(document).ready(function() {
                     };
                 });
             }
+        }
+    });
+
+    /* Animations on scroll */
+    /* We are using waypoint.js for it */
+    /* It triggers the function on scroll */
+    $('.js--wp-1').waypoint(function(direction) {
+        $('.js--wp-1').addClass('animated fadeIn');
+    }, {
+        offset: '70%'
+    })
+
+    $('.js--wp-2').waypoint(function(direction) {
+        $('.js--wp-2').addClass('animated fadeInUp');
+    }, {
+        offset: '70%'
+    })
+
+    $('.js--wp-3').waypoint(function(direction) {
+        $('.js--wp-3').addClass('animated fadeIn');
+    }, {
+        offset: '75%'
+    })
+
+    $('.js--wp-4').waypoint(function(direction) {
+        $('.js--wp-4').addClass('animated pulse');
+    }, {
+        offset: '50%'
+    })
+
+    /* Mobile navigations */
+    $('.js--nav-icon').click(function() {
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon i ion-icon');
+        console.log(icon);
+
+        nav.slideToggle(200);
+        if(icon.attr('name') == 'menu') {
+            icon.attr('name', 'close');
+        } else {
+            icon.attr('name', 'menu');
         }
     });
 });
