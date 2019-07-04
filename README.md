@@ -7,5 +7,9 @@ Demos of HTML5 and CSS3
 * To compile .scss to .css
     - npm run compile:sass
 * To run live server
-    - live-server
-* 
+    - live-server (To install=> npm install live-server -g)
+
+
+
+* For Icons:
+    - https://github.com/linea-io/Linea-Iconset
