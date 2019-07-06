@@ -15,7 +15,9 @@
     /* 192dpi(dots per inch) is for higher resolution */
     /* It's good to use dpi with min-width */
     /* Condition: (192dpi && min600px) OR min2000px */
+    /* -webkit-min-device-pixel-ratio for safari browser */
     @media(min-resolution: 192dpi) and (min-width : 37.5em),
+          (-webkit-min-device-pixel-ratio: 2) and (min-width : 37.5em),
           (min-width: 125em)
     {
         background-image: linear-gradient(
