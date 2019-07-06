@@ -75,9 +75,32 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+
+                            <!-- Resolution switching with density switching -->
+                            <!-- 300w and 1000w are widths of image -->
+                            <!-- sizes attribute to help browser to decide which image to load -->
+                            <!-- 20vw (171px image size/900px), 30vw (171px img size/600) -->
+                            <!-- src attribute to make sure it works on older browsers as well if no srcset -->
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 1"
+                                 class="composition__photo composition__photo--p1"
+                                 src="img/nat-1-large.jpg">
+
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 2"
+                                 class="composition__photo composition__photo--p2"
+                                 src="img/nat-2-large.jpg">
+
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 3"
+                                 class="composition__photo composition__photo--p3"
+                                 src="img/nat-3-large.jpg">
+                            <!--<img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">-->
                         </div>
                     </div>
                 </div>
@@ -336,7 +359,22 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+
+                <!-- Art direction usage along with density switching -->
+                <picture class="footer__logo">
+                    <!-- Use this image source set when device width is max 600px/37.5em -->
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <!-- Else use this image source set -->
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                         alt="Full logo"
+                         src="img/logo-green-small-2x.png">
+                </picture>
+
+                <!-- Using density descriptor 2x for higher density resolution, 1x for lower density resolution -->
+                <!-- Browser will decide which image to render in browser -->
+                <!--<img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                         alt="Full logo" class="footer__logo"
+                         src="img/logo-green-small-2x.png">-->
             </div>
             <div class="row">
                 <div class="col-1-of-2">
