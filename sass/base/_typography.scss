@@ -4,7 +4,6 @@ body {
     /*font-size: 16px;*/
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -15,7 +14,7 @@ body {
     element is shaking (going up), to fix it, use this */
     backface-visibility: hidden;
     
-    margin-bottom: 6rem;
+    margin-bottom: 6rem;    
 
     &--main 
     {
@@ -32,6 +31,11 @@ body {
         animation-timing-function: ease-out; /* For animation acceleration */
         /*animation-iteration-count: 3;*/
         /*animation-delay: 3s;*/
+
+        @include respond(phone) 
+        {
+            letter-spacing: .5rem;
+        }
     }
 
     &--sub {
@@ -55,6 +59,16 @@ body {
     color: transparent;     // Making the background transparent, so only text will have gradient effect
     letter-spacing: .2rem;
     transition: all .2s;
+
+    @include respond(tab-port) 
+    {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) 
+    {
+        font-size: 2.5rem;
+    }
 
     &:hover 
     {
