@@ -154,7 +154,12 @@
 
 
 
-    @include respond(tab-port) {
+    //@include respond(tab-port) 
+    // To make it visible for all mobile devices since there is no hover on mobile devices
+    // Condition: max-width: 56.25rem OR hover:none (means for mobiles)
+    @media only screen and  (max-width: 56.25em),
+           only screen and (hover: none)
+    {
         height: auto;
         border-radius: 3px;
         background-color: $color-white;
