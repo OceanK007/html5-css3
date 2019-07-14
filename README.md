@@ -23,3 +23,6 @@ Demos of HTML5 and CSS3
 
 * For Icons:
     - https://github.com/linea-io/Linea-Iconset
+* For Svg Icons:
+    - https://icomoon.io 
+    - Go to IcoMoon App > Add icons from library > Entypo+ > Select icons you want > Generate SVG and More > Setting icon > Deselect PNG > Download > Copy SVG folder and symbol-defs.svg to your img folder.
