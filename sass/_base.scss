@@ -32,4 +32,22 @@ body {
     font-family: $font-primary;
     color: $color-grey-dark-2;
     font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    // 6 rows
+    // 1st: header + realtors
+    // 2nd: features 
+    // 3rd: story__pictures + story__content
+    // 4th: homes
+    // 5th: gallery
+    // 6th: footer
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);  // We can use auto(default) as replacement of min-content as well
+    // 11 columns (1side + 1fr + 8 in mid + 1fr)
+    // 1fr are used to occupy the remaining space around 8 columns
+    // We could have used margin 0 auto, but here we got sidebar as a column as well. So we can't use it.
+    // 6 repeated column names are: "col-start 1", "col-start 2" ..... "col-start 8"
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];  //1140/8 = 142.8 ~ 14rem;
 }
