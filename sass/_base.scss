@@ -14,6 +14,7 @@ $color-grey-dark-2: #6D5D4B;
 $bp-largest: 75em;  // 1200 // 1200/16 = 75em;
 $bp-large: 62.5em;  // 1000 // 1000/16 = 62.5em;
 $bp-medium: 50em;   // 800 // 800/16 = 50em;
+$bp-small: 37.5em;  // 600  // 600/16: 37.5em;
 
 
 // FONT VARIABLES
@@ -67,6 +68,7 @@ body {
     }
 
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+        //grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
+        grid-template-rows: 6rem calc(100vh - 6rem);    // Rest will be auto min-content
     }
 }
